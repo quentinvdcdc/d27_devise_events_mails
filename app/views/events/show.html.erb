@@ -8,8 +8,10 @@
 <p>Lieu : <%= @event.location %></p>
 <p>Prix : <%= @event.price %></p>
 
-<% if already_attendee_or_admin?(@event) %>
+<% if !already_attendee_or_admin?(@event) %>
 <%= link_to 'Inscription', new_event_attendance_path(@event.id) %>
+<% else %>
+<p>Vous en êtes déjà, ça va être chouette</p>
 <% end %>
 
 <% if is_admin?(@event) %>

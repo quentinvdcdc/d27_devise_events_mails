@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #resources :home, only: [:index, :secret]
   root 'home#index'
-  get 'home/secret'
+  #get 'home/secret'
   devise_for :users
   resources :events do
   	resources :attendances

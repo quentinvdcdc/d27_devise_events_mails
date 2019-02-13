@@ -35,11 +35,11 @@ class AttendancesController < ApplicationController
 		@attendance = Attendance.new(stripe_customer_id: charge[:customer], attendee: current_user, event: @event)
 		if @attendance.save
 			# si ça marche, il redirige vers la page d'index du site
-  		#flash[:success] = "Oh le beau event !" #hash depuis l'application.html.erb
+  		flash[:success] = "Oh ça va être bat comme on disait d'antan !" #hash depuis l'application.html.erb
     	redirect_to event_path(@event.id)
   	else
   	  	# sinon, il render la view new (qui est celle sur laquelle on est déjà)
-  	  	# flash[:danger] = "Meh si tu payes pas, comment on va s'enrichir à tes dépens ?" #idem
+  	  flash[:danger] = "Meh si tu payes pas, comment on va s'enrichir, nous ?" #idem
   		render 'new'
   	end
 	end

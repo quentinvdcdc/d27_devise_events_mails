@@ -1,6 +1,6 @@
 module EventsHelper
 	def already_attendee_or_admin?(event)
-		if (current_user != event.administrator) && (!event.attendees.include?(current_user))
+		if (current_user == event.administrator) || (event.attendees.include?(current_user))
 			true
 		else
 			false

@@ -5,5 +5,5 @@
 <%= attendee.first_name %>
 <% end %><br /><br />
 <%= "$" * 30 %><br /><br />
-<%= link_to "Modifier l'event" %><br /><br />
+<%= link_to "Modifier l'event", edit_event_path(@event.id) %><br /><br />
 <%= link_to "Supprime l'event", event_path(@event.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
