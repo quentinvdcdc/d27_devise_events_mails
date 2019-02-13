@@ -10,7 +10,7 @@ Le projet du jour consiste au fait que tu puisses;
 
 __komment sa marche ?__
 
-https://eventrite.herokuapp.com/
+https://the-eventbrite-app.herokuapp.com/
 
 ~~~~~~~~~~~~~~~~~
 $ bundle install
