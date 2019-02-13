@@ -34,7 +34,7 @@
               <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
             </li>
             <li>
-              <%= link_to "Your Profile"  %>
+              <%= link_to "Your Profile", user_path(current_user.id) %>
             </li>
           <% else %>
             <li>    
