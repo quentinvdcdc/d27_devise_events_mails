@@ -29,4 +29,8 @@ class Event < ApplicationRecord
   	errors.add(:start_date, "can't be updated in the past") if
   		start_date < Date.today
 	end
+
+  def end_date
+    self.start_date + (self.duration).minute
+  end
 end
