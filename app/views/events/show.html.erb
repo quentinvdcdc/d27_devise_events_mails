@@ -7,3 +7,11 @@
 <p>Fin : <%= @event.end_date %></p>
 <p>Lieu : <%= @event.location %></p>
 <p>Prix : <%= @event.price %></p>
+
+<% if already_attendee_or_admin?(@event) %>
+<%= link_to 'Inscription', new_event_attendance_path(@event.id) %>
+<% end %>
+
+<% if is_admin?(@event) %>
+<%= link_to 'Mon Espace Privé', event_attendances_path(@event.id) %>
+<% end %>

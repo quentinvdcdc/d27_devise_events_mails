@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_administrator, only: [:edit, :update, :destroy]
   def index
   end
   def show
@@ -20,5 +21,34 @@ class EventsController < ApplicationController
   	  #flash[:danger] = "Meh sans balloon c'est pas un vrai event" #idem
   	  render 'new'
   	end
+  end
+  def edit
+    @event = Event.find(params[:id])
+  end
+  def update
+    @event = Event.find(params[:id])
+    if @event.update(start_date: params[:start_date], duration: params[:duration], title: params[:title], description: params[:description], administrator: @event.administrator, price: params[:price], location: params[:location])
+      flash[:success] = "Modification saved !"
+      redirect_to root_path
+    else
+      flash[:danger] = "Non modification pas sauvegardée !"
+      render :edit
+    end
+  end
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to root_path
+  end
+
+  private 
+
+  def authenticate_administrator
+    @event = Event.find(params[:id])
+    if current_user == @event.administrator
+      true
+    else
+      false
+    end
   end
 end

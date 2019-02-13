@@ -23,3 +23,15 @@
     </li>
   <% end %>
 </ul>
+<div class="d-flex align-content-between flex-wrap">
+  <% @events.each do |event| %>
+    <div class="card mx-auto mt-4" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.title %></h5>
+        <p class="card-text"><%= event.description %></p>
+        <%= link_to "En savoir plus", event_path(event.id) %>
+      </div>
+    </div>
+  <% end %>
+</div>
