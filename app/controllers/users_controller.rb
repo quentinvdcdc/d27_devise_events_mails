@@ -25,11 +25,9 @@ class UsersController < ApplicationController
 	private
 
 	def authenticate_correct_user
-    @user = User.find(params[:id])
-    if current_user == @user
-      true
-    else
-      false
+    unless current_user == User.find(params[:id])
+      flash[:danger] = "Stalking Alert, the 'L' is Silent"
+      redirect_to root_path
     end
   end
 end
