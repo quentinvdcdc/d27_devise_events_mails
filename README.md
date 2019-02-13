@@ -1,24 +1,38 @@
-# README
+![](https://media.giphy.com/media/PVQJ0IX4cp0s/giphy.gif)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Coucou la correction. Bienvenue dans notre projet de cette 6ème semaine (oui, déjà) !
 
-Things you may want to cover:
+### Le Eventbrite Like !
 
-* Ruby version
+Le projet du jour consiste au fait que tu puisses;
 
-* System dependencies
+1. Te register (tu recevras un mail).
+2. Créer un event, indiquer son prix.
+3. Rejoindre un event, payer pour ta participation.
 
-* Configuration
+__komment sa marche ?__
 
-* Database creation
+https://the-eventbrite-app.herokuapp.com/
 
-* Database initialization
+~~~~~~~~~~~~~~~~~
+$ bundle install
 
-* How to run the test suite
+$ rails db:create
 
-* Services (job queues, cache servers, search engines, etc.)
+$ rails db:migrate
 
-* Deployment instructions
+$ rails db:seed
 
-* ...
+$ rails console
+~~~~~~~~~~~~~~~~~
+
+#### Made with ♥ by:
+
+##### Quentin Vandecandelaere -> @Quentin Vandecandelaere
+
+##### Martin François -> @tinmar
+
+##### Xavier Refour -> @Xavier.Refour
+
+
+![](https://media.giphy.com/media/RZxhxSgQBzhRK/giphy.gif)
