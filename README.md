@@ -1,3 +1,5 @@
+![](https://media.giphy.com/media/PVQJ0IX4cp0s/giphy.gif)
+
 Coucou la correction. Bienvenue dans notre projet de cette 6ème semaine (oui, déjà) !
 
 ### Le Eventbrite Like !
