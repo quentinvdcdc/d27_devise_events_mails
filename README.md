@@ -10,6 +10,8 @@ Le projet du jour consiste au fait que tu puisses;
 
 __komment sa marche ?__
 
+https://eventrite.herokuapp.com/
+
 ~~~~~~~~~~~~~~~~~
 $ bundle install
 
@@ -22,8 +24,6 @@ $ rails db:seed
 $ rails console
 ~~~~~~~~~~~~~~~~~
 
-https://the-eventbrite-app.herokuapp.com/
-
 #### Made with ♥ by:
 
 ##### Quentin Vandecandelaere -> @Quentin Vandecandelaere
@@ -33,6 +33,4 @@ https://the-eventbrite-app.herokuapp.com/
 ##### Xavier Refour -> @Xavier.Refour
 
 
-![](https://media.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.gif)
-
-https://the-eventbrite-app.herokuapp.com/
+![](https://media.giphy.com/media/RZxhxSgQBzhRK/giphy.gif)
